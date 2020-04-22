@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on EatFog的博客</title>
-    <link>eatfog.github.io/posts/</link>
+    <link>/posts/</link>
     <description>Recent content in Posts on EatFog的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <lastBuildDate>Thu, 23 Apr 2020 01:32:48 +0800</lastBuildDate>
     
-	<atom:link href="eatfog.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>第2条blog</title>
-      <link>eatfog.github.io/posts/2page/</link>
+      <link>/posts/2page/</link>
       <pubDate>Thu, 23 Apr 2020 01:32:48 +0800</pubDate>
       
-      <guid>eatfog.github.io/posts/2page/</guid>
+      <guid>/posts/2page/</guid>
       <description>Hello!
 这是我的第二条blog</description>
     </item>
     
     <item>
       <title>搭建个人博客方法</title>
-      <link>eatfog.github.io/posts/firstpage/</link>
+      <link>/posts/firstpage/</link>
       <pubDate>Thu, 23 Apr 2020 00:14:35 +0800</pubDate>
       
-      <guid>eatfog.github.io/posts/firstpage/</guid>
+      <guid>/posts/firstpage/</guid>
       <description> 大家好 使用hugo搭建个人博客的方法：
 下载hugo.exe
  使用hugo new site quickstart在指定目录生成一个site
