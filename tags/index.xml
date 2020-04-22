@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on EatFog的博客</title>
-    <link>http://earfog.github.io/tags/</link>
+    <link>https://eatfog.github.io/tags/</link>
     <description>Recent content in Tags on EatFog的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <lastBuildDate>Thu, 23 Apr 2020 01:32:48 +0800</lastBuildDate>
     
-	<atom:link href="http://earfog.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://eatfog.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>tag1</title>
-      <link>http://earfog.github.io/tags/tag1/</link>
+      <link>https://eatfog.github.io/tags/tag1/</link>
       <pubDate>Thu, 23 Apr 2020 01:32:48 +0800</pubDate>
       
-      <guid>http://earfog.github.io/tags/tag1/</guid>
+      <guid>https://eatfog.github.io/tags/tag1/</guid>
       <description></description>
     </item>
     
