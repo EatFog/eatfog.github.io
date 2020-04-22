@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>2page</title>
+      <title>第2条blog</title>
       <link>http://example.org/posts/2page/</link>
       <pubDate>Thu, 23 Apr 2020 01:32:48 +0800</pubDate>
       
@@ -33,12 +33,20 @@
     </item>
     
     <item>
-      <title>Firstpage</title>
+      <title>搭建个人博客方法</title>
       <link>http://example.org/posts/firstpage/</link>
       <pubDate>Thu, 23 Apr 2020 00:14:35 +0800</pubDate>
       
       <guid>http://example.org/posts/firstpage/</guid>
-      <description>大家好 我的博客开通了，这是我的第一个page</description>
+      <description> 大家好 使用hugo搭建个人博客的方法：
+下载hugo.exe
+ 使用hugo new site quickstart在指定目录生成一个site
+ 设置主题
+ 写一些正文(比如这条)
+ 用hugo server预览生成的页面。课动态调整
+ 用hugo -D生产静态的页面，存放在public文件夹里面
+ 把public文件夹git到github上
+  </description>
     </item>
     
   </channel>
