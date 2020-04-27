@@ -80,104 +80,80 @@ HTML入门笔记1
       </header>
       <article style="margin-top: 2rem;"><p>上周刚刚搞定HTML的入门部分，今天补一下笔记</p>
 
-<ol>
-<li><p>HTML是由Berners-Lee发明的，他发明了WWW以及HTML、HTTP和URL，是咱们的祖师爷</p></li>
+<h1 id="html-是谁发明的">HTML 是谁发明的</h1>
 
-<li><p>写一个HTML基本的起手式在下面:</p>
+<ul>
+<li>HTML是由Berners-Lee发明的，他发明了WWW以及HTML、HTTP和URL，是咱们的祖师爷</li>
+</ul>
+
+<h1 id="写一个html基本的起手式">写一个HTML基本的起手式</h1>
 
 <pre><code>&lt;!DOCTYPE html&gt;&lt;!--文档类型--&gt;
 &lt;html lang=&quot;en&quot;&gt;&lt;!--lang是语言--&gt;
 &lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;!--字符编码类型--&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;&lt;!--禁止缩放，兼容手机--&gt;
-&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;id=edge&quot;&gt; &lt;!--ie使用最新内核--&gt;
-&lt;title&gt;HTMLpage&lt;/title&gt;&lt;!--标题--&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;&lt;!--字符编码类型--&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;&lt;!--禁止缩放，兼容手机--&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;id=edge&quot;&gt; &lt;!--ie使用最新内核--&gt;
+    &lt;title&gt;HTMLpage&lt;/title&gt;&lt;!--标题--&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;p&gt;HTML content&lt;/p&gt;&lt;!--内容基本都在body中展示--&gt;
+    &lt;p&gt;HTML content&lt;/p&gt;&lt;!--内容基本都在body中展示--&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></li>
+</code></pre>
 
-<li><p>章节标签有：</p></li>
-</ol>
+<h1 id="章节标签">章节标签</h1>
 
-<p>h1~h6：标题</p>
+<ul>
+<li>h1~h6：标题</li>
+<li>section：章节</li>
+<li>article:文章</li>
+<li>p:段落，最常用的文本标签</li>
+<li>header：头部标签，一般都是网站的头部通用的元素的标签</li>
+<li>footer:脚步标签，一般都是网站的脚步通用的元素的标签</li>
+<li>main:主要内容</li>
+<li>aside：旁支内容</li>
+<li>div：块元素，一个HTML中最重要的元素，一般可以当任何元素的爹（包括div自己）</li>
+</ul>
 
-<p>section：章节</p>
+<h1 id="全局属性">全局属性</h1>
 
-<p>article:文章</p>
+<ul>
+<li>class：类，用于js选择元素和css设置样式</li>
+<li>contenteditable:元素可编辑</li>
+<li>hidden，元素不可见，类似display：none</li>
+<li>id，可设置为元素的唯一标识，但是html无法确认元素id唯一性</li>
+<li>style。直接在标签中设置html样式属性，优先级最高</li>
+<li>tabindex，规定元素的 tab 键控制次序</li>
+<li>title，用户鼠标在元素上时候出现的文本提示</li>
+</ul>
 
-<p>p:段落，最常用的文本标签</p>
+<h1 id="内容标签">内容标签</h1>
 
-<p>header：头部标签，一般都是网站的头部通用的元素的标签</p>
+<ul>
+<li>p:段落标签</li>
+<li>ol（orderlist）:有序列表，子元素li</li>
+<li>ul:无序列表，子元素li</li>
+<li>dl:描述列表，dt表述对象，dd描述内容</li>
+<li>多个空格/tab/回车在页面里=一个空格</li>
+<li>pre:保留空格</li>
+<li>code:等宽，写代码用</li>
+<li>hr:分隔线</li>
+<li>a:超链接</li>
+<li>br:换行</li>
+<li>em&amp;strong:文本重点</li>
+</ul>
 
-<p>footer:脚步标签，一般都是网站的脚步通用的元素的标签</p>
+<h1 id="默认样式">默认样式</h1>
 
-<p>main:主要内容</p>
-
-<p>aside：旁支内容</p>
-
-<p>div：块元素，一个HTML中最重要的元素，一般可以当任何元素的爹（包括div自己）</p>
-
-<ol>
-<li>全局属性
-<br /></li>
-</ol>
-
-<p>class：类，用于js选择元素和css设置样式</p>
-
-<p>contenteditable:元素可编辑</p>
-
-<p>hidden，元素不可见，类似display：none</p>
-
-<p>id，可设置为元素的唯一标识，但是html无法确认元素id唯一性</p>
-
-<p>style。直接在标签中设置html样式属性，优先级最高</p>
-
-<p>tabindex，规定元素的 tab 键控制次序</p>
-
-<p>title，用户鼠标在元素上时候出现的文本提示</p>
-
-<ol>
-<li><p>内容标签</p>
-
-<p>p:段落标签</p>
-
-<p>ol（orderlist）:有序列表，子元素li</p>
-
-<p>ul:无序列表，子元素li</p>
-
-<p>dl:描述列表，dt表述对象，dd描述内容</p>
-
-<p>多个空格/tab/回车在页面里=一个空格</p>
-
-<p>pre:保留空格</p>
-
-<p>code:等宽，写代码用</p>
-
-<p>hr:分隔线</p>
-
-<p>a:超链接</p>
-
-<p>br:换行</p>
-
-<p>em&amp;strong:文本重点</p></li>
-
-<li><p>默认样式</p>
-
-<p>在写页面前加上一系列的默认样式</p>
-
-<p>table原样式贼丑</p>
-
-<p>margin和padding：0是必须的</p>
-
-<p>text-decoration：none，a的下划线不行</p>
-
-<p>list-style：none;原来的也不行</p>
-
-<p>都放到一个css里面，直接link调用</p></li>
-</ol></article>
+<ul>
+<li>在写页面前加上一系列的默认样式</li>
+<li>table原样式贼丑</li>
+<li>margin和padding：0是必须的</li>
+<li>text-decoration：none，a的下划线不行</li>
+<li>list-style：none;原来的也不行</li>
+<li>都放到一个css里面，直接link调用<br /></li>
+</ul></article>
     </section>
 
     <footer class="ui attached segment dream-tags">
