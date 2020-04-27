@@ -2,31 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>EatFog的博客</title>
-    <link>eatfog.github.io/</link>
+    <link>https://eatfog.net/</link>
     <description>Recent content on EatFog的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <lastBuildDate>Thu, 23 Apr 2020 01:32:48 +0800</lastBuildDate>
     
-	<atom:link href="eatfog.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://eatfog.net/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>第2条blog</title>
-      <link>eatfog.github.io/posts/2page/</link>
+      <title>HTML入门笔记1</title>
+      <link>https://eatfog.net/posts/2page/</link>
       <pubDate>Thu, 23 Apr 2020 01:32:48 +0800</pubDate>
       
-      <guid>eatfog.github.io/posts/2page/</guid>
-      <description>Hello!
-这是我的第二条blog</description>
+      <guid>https://eatfog.net/posts/2page/</guid>
+      <description>&lt;p&gt;上周刚刚搞定HTML的入门部分，今天补一下笔记&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>自我介绍</title>
-      <link>eatfog.github.io/about/desc/</link>
+      <link>https://eatfog.net/about/desc/</link>
       <pubDate>Thu, 23 Apr 2020 01:13:11 +0800</pubDate>
       
-      <guid>eatfog.github.io/about/desc/</guid>
+      <guid>https://eatfog.net/about/desc/</guid>
       <description>Hi!我是蒋俊杰
 你也可以叫我EatFog
 这是我的第一个blog</description>
@@ -34,19 +33,11 @@
     
     <item>
       <title>搭建个人博客方法</title>
-      <link>eatfog.github.io/posts/firstpage/</link>
+      <link>https://eatfog.net/posts/firstpage/</link>
       <pubDate>Thu, 23 Apr 2020 00:14:35 +0800</pubDate>
       
-      <guid>eatfog.github.io/posts/firstpage/</guid>
-      <description> 大家好 使用hugo搭建个人博客的方法：
-下载hugo.exe
- 使用hugo new site quickstart在指定目录生成一个site
- 设置主题
- 写一些正文(比如这条)
- 用hugo server预览生成的页面。课动态调整
- 用hugo -D生产静态的页面，存放在public文件夹里面
- 把public文件夹git到github上
-  </description>
+      <guid>https://eatfog.net/posts/firstpage/</guid>
+      <description>&lt;p&gt;之前学习了使用hugo搭建个人博客，现在做一个简单的总结&lt;/p&gt;</description>
     </item>
     
   </channel>
