@@ -6,13 +6,22 @@
     <description>Recent content in category1 on EatFog的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sun, 24 May 2020 00:58:38 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2020 02:14:35 +0800</lastBuildDate>
     
 	<atom:link href="https://eatfog.net/categories/category1/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>《CSS动画》</title>
+      <title>CSS布局</title>
+      <link>https://eatfog.net/posts/5page/</link>
+      <pubDate>Sun, 24 May 2020 02:14:35 +0800</pubDate>
+      
+      <guid>https://eatfog.net/posts/5page/</guid>
+      <description>&lt;p&gt;今天进行CSS的总结，下面是布局部分&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>CSS动画</title>
       <link>https://eatfog.net/posts/4page/</link>
       <pubDate>Sun, 24 May 2020 00:58:38 +0800</pubDate>
       
@@ -21,7 +30,7 @@
     </item>
     
     <item>
-      <title>《HTML常用标签》</title>
+      <title>HTML常用标签</title>
       <link>https://eatfog.net/posts/3page/</link>
       <pubDate>Wed, 29 Apr 2020 00:58:38 +0800</pubDate>
       
