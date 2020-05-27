@@ -5,39 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-
-
-
-
-
+浅析 URL
 </title>
 
     
 
 
   
-  <meta name="author" content="" />
-  <meta name="description" content="" />
+  <meta name="author" content="EatFog" />
+  <meta name="description" content="今天学习了URL的相应知识，接下来我们来总结一下笔记
+" />
 
 
 
 <meta name="generator" content="Hugo 0.57.2" />
 
-<link rel="canonical" href="https://eatfog.net/about/" />
+<link rel="canonical" href="https://eatfog.net/posts/6page/" />
 
 
-<meta property="og:title" content="Abouts" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://eatfog.net/about/" />
-
-<meta property="og:updated_time" content="2020-04-23T01:13:11+08:00" />
+<meta property="og:title" content="浅析 URL" />
+<meta property="og:description" content="今天学习了URL的相应知识，接下来我们来总结一下笔记" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://eatfog.net/posts/6page/" />
+<meta property="article:published_time" content="2020-05-28T01:03:52+08:00" />
+<meta property="article:modified_time" content="2020-05-28T01:03:52+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Abouts"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="浅析 URL"/>
+<meta name="twitter:description" content="今天学习了URL的相应知识，接下来我们来总结一下笔记"/>
 
 
 <link rel="stylesheet" href="/css/github-markdown.css" />
@@ -72,7 +69,87 @@
 
           
 <div class="ui centered relaxed grid dream-grid">
-  <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h2 class="ui header">
+          浅析 URL
+          <div class="sub header">@ EatFog · Thursday, May 28, 2020 · 1 分钟阅读 · 更新于 May 28, 2020</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><p>今天学习了URL的相应知识，接下来我们来总结一下笔记</p>
+
+<h1 id="ip">IP</h1>
+
+<p>ip是互联网协议，约定了如何定位一台设备，如何封装数据报文用来和其他设备交流</p>
+
+<ol>
+<li>设备通过路由器链接电信的服务器，服务器会给路由器分配一个外网ip</li>
+<li>路由器会创建一个内网，内网的设备交互会使用内网ip，一般为192.168.xxx.xxx,每个设备都会分配到一个独立的内网ip</li>
+<li>内网之间的设备可以互相访问，但是访问外网要经过路由器中转</li>
+<li>外网设备可以相互访问，但是不可访问别的内网</li>
+<li>127.0.0.1=localhost=自己。0.0.0.0不能表示任何设备</li>
+<li>host可以让字符串代替网址</li>
+<li><code>ping qq.com</code>可以向qq.com的服务器发送请求返回延迟</li>
+</ol>
+
+<h1 id="端口">端口</h1>
+
+<p>端口定位了设备所提供的服务</p>
+
+<ol>
+<li>一台设备有65535个端口</li>
+<li>每个端口可以提供不同的服务</li>
+<li>0到1023端口是系统使用的，一个端口被占用，只能用别的端口</li>
+</ol>
+
+<h1 id="域名">域名</h1>
+
+<p>域名是ip的映射
+1. 一个搞域名可以对应不同的ip，为了负载均衡
+2. 一个ip可以对应不同的域名，共享主机
+3. <code>nslookup qq.com</code>可以向DNS服务器获取域名对应的ip
+4. 从域名到ip：浏览器向电信DNS的服务器发送域名&gt;电信返回一个ip&gt;浏览器对对应的ip的端口发送请求&gt;浏览器把服务器返回的资源解析成网页
+5. net是顶级域名，eatfog.net是二级域名，www.eatfog.net是三级域名，二级和三级域名是父子关系，可以是不同的人拥有
+6. 不同的路径可以从服务器中获取不同的资源</p>
+
+<h1 id="url">URL</h1>
+
+<ol>
+<li>不同的路径可以从服务器中获取不同的资源</li>
+<li>同一个路径可以通过查询参数获取不同的资源（get请求）</li>
+<li>锚点可以让页面处于不同的位置，锚点是不会传给数据库的</li>
+
+<li><p>一个URL由协议+域名+端口号+路径+查询参数+锚点组成。例:</p>
+
+<pre><code>https://eatfog.net:8080/page?id=1&amp;pass=2#content
+</code></pre></li>
+</ol></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+        
+          <a class="ui label" href="/tags/tag1" title="tag1">tag1</a>
+        
+          <a class="ui label" href="/tags/tag2" title="tag2">tag2</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; background: #1b1c1d !important; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i> Save as image
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
     <article class="dream-header">
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
@@ -192,52 +269,7 @@
 </article>
 
   </div>
-
-  
-  
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-      
-<article class="ui raised card dream-card">
-
-  <div class="image">
-    
-      <img src="/img/default4.jpg" alt="自我介绍" />
-    
-  </div>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="https://eatfog.net/about/desc/">自我介绍</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Thursday, Apr 23, 2020</p>
-      <p class="author">@ </p>
-    </div>
-    <div class="description">
-      Hi!我是蒋俊杰
-你也可以叫我EatFog
-这是我的第一个blog
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      1 分钟阅读
-    </a>
-  </div>
-</article>
-
-    </div>
-  
 </div>
-
-<div class="ui secondary menu dream-menu dream-paginator">
-  
-
-  
-</div>
-
 
         </section>
         <section class="back">
@@ -308,7 +340,6 @@
 
   
   
-
 </div>
 
         </section>

@@ -6,10 +6,19 @@
     <description>Recent content in category1 on EatFog的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sun, 24 May 2020 02:14:35 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2020 01:03:52 +0800</lastBuildDate>
     
 	<atom:link href="https://eatfog.net/categories/category1/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>浅析 URL</title>
+      <link>https://eatfog.net/posts/6page/</link>
+      <pubDate>Thu, 28 May 2020 01:03:52 +0800</pubDate>
+      
+      <guid>https://eatfog.net/posts/6page/</guid>
+      <description>&lt;p&gt;今天学习了URL的相应知识，接下来我们来总结一下笔记&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>CSS布局</title>
