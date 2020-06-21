@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-浅析 URL
+JavaScript语法
 </title>
 
     
@@ -13,28 +13,28 @@
 
   
   <meta name="author" content="EatFog" />
-  <meta name="description" content="今天学习了URL的相应知识，接下来我们来总结一下笔记
+  <meta name="description" content="JavaScript不是一门完美的语言，但是JavaScript是一门实用的，能产生价值的语言。
 " />
 
 
 
 <meta name="generator" content="Hugo 0.57.2" />
 
-<link rel="canonical" href="https://eatfog.net/posts/6page/" />
+<link rel="canonical" href="https://eatfog.net/posts/8page/" />
 
 
-<meta property="og:title" content="浅析 URL" />
-<meta property="og:description" content="今天学习了URL的相应知识，接下来我们来总结一下笔记" />
+<meta property="og:title" content="JavaScript语法" />
+<meta property="og:description" content="JavaScript不是一门完美的语言，但是JavaScript是一门实用的，能产生价值的语言。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://eatfog.net/posts/6page/" />
-<meta property="article:published_time" content="2020-05-28T01:03:52+08:00" />
-<meta property="article:modified_time" content="2020-05-28T01:03:52+08:00" />
+<meta property="og:url" content="https://eatfog.net/posts/8page/" />
+<meta property="article:published_time" content="2020-06-20T23:25:31+08:00" />
+<meta property="article:modified_time" content="2020-06-20T23:25:31+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="浅析 URL"/>
-<meta name="twitter:description" content="今天学习了URL的相应知识，接下来我们来总结一下笔记"/>
+<meta name="twitter:title" content="JavaScript语法"/>
+<meta name="twitter:description" content="JavaScript不是一门完美的语言，但是JavaScript是一门实用的，能产生价值的语言。"/>
 
 
 <link rel="stylesheet" href="/css/github-markdown.css" />
@@ -74,57 +74,114 @@
     <section class="ui top attached segment" id="dream-save-post-as-img">
       <header style="margin-top: 0 !important;">
         <h2 class="ui header">
-          浅析 URL
-          <div class="sub header">@ EatFog · Thursday, May 28, 2020 · 1 分钟阅读 · 更新于 May 28, 2020</div>
+          JavaScript语法
+          <div class="sub header">@ EatFog · Saturday, Jun 20, 2020 · 1 分钟阅读 · 更新于 Jun 20, 2020</div>
         </h2>
       </header>
-      <article style="margin-top: 2rem;"><p>今天学习了URL的相应知识，接下来我们来总结一下笔记</p>
+      <article style="margin-top: 2rem;"><p>JavaScript不是一门完美的语言，但是JavaScript是一门实用的，能产生价值的语言。</p>
 
-<h1 id="ip">IP</h1>
-
-<p>ip是互联网协议，约定了如何定位一台设备，如何封装数据报文用来和其他设备交流</p>
+<h1 id="一些重要的语法">一些重要的语法</h1>
 
 <ol>
-<li>设备通过路由器链接电信的服务器，服务器会给路由器分配一个外网ip</li>
-<li>路由器会创建一个内网，内网的设备交互会使用内网ip，一般为192.168.xxx.xxx,每个设备都会分配到一个独立的内网ip</li>
-<li>内网之间的设备可以互相访问，但是访问外网要经过路由器中转</li>
-<li>外网设备可以相互访问，但是不可访问别的内网</li>
-<li>127.0.0.1=localhost=自己。0.0.0.0不能表示任何设备</li>
-<li>host可以让字符串代替网址</li>
-<li><code>ping qq.com</code>可以向qq.com的服务器发送请求返回延迟</li>
+<li>JavaScript的大小写是敏感的，声明和写语句的时候要注意</li>
+<li>空格没啥实际意义，只要不影响断句。</li>
+<li>return后面不能回车，不然认为是空默认加上undefined</li>
+<li>变量名的字符可以是Unicode字符或者中文，但是第一个字符不能用数字</li>
+<li>注译的类型有<code>//一行注译</code>，<code>/*多行注释*/</code>，注释要精简，准确，踩坑注释，遇到bug的注释,奇怪需求的注释</li>
 </ol>
 
-<h1 id="端口">端口</h1>
-
-<p>端口定位了设备所提供的服务`</p>
+<h1 id="表达式和语句">表达式和语句</h1>
 
 <ol>
-<li>一台设备有65535个端口</li>
-<li>每个端口可以提供不同的服务</li>
-<li>0到1023端口是系统使用的，一个端口被占用，只能用别的端口</li>
+<li><code>1+2</code>是一个表达式，值为3</li>
+<li><code>add(1,2)</code>是表达式，它的值是函数运行后的返回值</li>
+<li><code>console.log</code>是表达式，但是因为还没写参数，它的值是函数本身</li>
+<li><code>console.log(3)</code>是表达式，它的值是console.log的返回值undefined，函数本身打印出了3</li>
+<li><code>var a = 1</code>是一个语句，他的值是undefined</li>
+<li>表达式一般都有值，语句可能会有可能没有</li>
+<li>语句一般会改变环境(声明，赋值)</li>
 </ol>
 
-<h1 id="域名">域名</h1>
-
-<p>域名是ip的映射
-1. 一个搞域名可以对应不同的ip，为了负载均衡
-2. 一个ip可以对应不同的域名，共享主机
-3. <code>nslookup qq.com</code>可以向DNS服务器获取域名对应的ip
-4. 从域名到ip：浏览器向电信DNS的服务器发送域名&gt;电信返回一个ip&gt;浏览器对对应的ip的端口发送请求&gt;浏览器把服务器返回的资源解析成网页
-5. net是顶级域名，eatfog.net是二级域名，www.eatfog.net是三级域名，二级和三级域名是父子关系，可以是不同的人拥有
-6. 不同的路径可以从服务器中获取不同的资源</p>
-
-<h1 id="url">URL</h1>
+<h1 id="if语句">if语句</h1>
 
 <ol>
-<li>不同的路径可以从服务器中获取不同的资源</li>
-<li>同一个路径可以通过查询参数获取不同的资源（get请求）</li>
-<li>锚点可以让页面处于不同的位置，锚点是不会传给数据库的</li>
+<li><p>语法:</p>
 
-<li><p>一个URL由协议+域名+端口号+路径+查询参数+锚点组成。例:</p>
+<pre><code>if(表达式){语句1}else{语句2}    
+</code></pre>
 
-<pre><code>https://eatfog.net:8080/page?id=1&amp;pass=2#content
-</code></pre></li>
+<p>表达式为ture，执行语句1，否则执行语句2</p></li>
+
+<li><p>语句的{}可以省去，但是只管一行</p></li>
+
+<li><p>else if 本质是后面的if嵌套在else中</p></li>
+
+<li><p>if语句最好没有歧义</p></li>
+
+<li><p>switch是if&hellip;else的升级版，语法：</p>
+
+<pre><code>    switch(a){
+    case 1:1对应的表达式1
+    break;
+    case 2:2对应的表达式2
+    break;
+    default:其余的时候的表达式3
+    } 
+</code></pre>
+
+<p>switch是按顺序一个一个用a对比case的，满足了以后不加break推出循环会一直进行下去。</p></li>
+
+<li><p>?:表达式用于简化if语句，语法：</p>
+
+<pre><code>    表达式? 语句1 : 语句2
+    
+</code></pre>
+
+<p>当表达式满足的时候，执行语句1，反之执行语句2</p></li>
+
+<li><p>&amp;&amp;代码也算是简化if的语句，语法：</p>
+
+<pre><code>    A&amp;&amp;B&amp;&amp;C&amp;&amp;D
+</code></pre>
+
+<p>&amp;&amp;会取第一个假的值或者最后一个值</p></li>
+
+<li><p>||同理，也是简化if的语句，语法：</p>
+
+<pre><code>    A||B||C||D
+</code></pre>
+
+<p>||会取第一个真的值或者最后一个值</p></li>
+</ol>
+
+<h1 id="while循环">while循环</h1>
+
+<ol>
+<li><p>语法:</p>
+
+<pre><code>    while(表达式){语句}
+</code></pre>
+
+<p>先判断表达式真假，表达式为真，执行语句，然后接着判断表达式真假。表达式为假，直接退出循环</p></li>
+
+<li><p>当表达式一直无法满足的时候，会一直死循环</p></li>
+</ol>
+
+<h1 id="for循环">for循环</h1>
+
+<ol>
+<li><p>for循环是while循环的方便写法，语法：</p>
+
+<pre><code>    for(语句1;表达式2;语句3){循环体}
+</code></pre>
+
+<p>循环执行的顺序是:语句1(初始化只在一开始执行)-&gt;判断表达式2-&gt;循环体-&gt;语句3-&gt;接着判断表达式2,直到表达式2为假的直接退出</p></li>
+
+<li><p>语句1写成let的时候，可以无视延时</p></li>
+
+<li><p>循环体中写break的时候会强制跳出循环</p></li>
+
+<li><p>语句1可以换位置声明，缺少表达式2而且循环中缺少break会进入死循环，语句3可以在循环中写</p></li>
 </ol></article>
     </section>
 
