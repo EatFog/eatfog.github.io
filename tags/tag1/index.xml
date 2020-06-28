@@ -6,10 +6,19 @@
     <description>Recent content in tag1 on EatFog的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sat, 20 Jun 2020 23:25:31 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2020 23:25:31 +0800</lastBuildDate>
     
 	<atom:link href="https://eatfog.net/tags/tag1/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScript对象</title>
+      <link>https://eatfog.net/posts/9page/</link>
+      <pubDate>Sun, 28 Jun 2020 23:25:31 +0800</pubDate>
+      
+      <guid>https://eatfog.net/posts/9page/</guid>
+      <description>&lt;p&gt;JavaScript的对象是JavaScript的核心，接下来我们就来介绍JavaScript对象相关的知识&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>JavaScript语法</title>
