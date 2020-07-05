@@ -5,35 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-Posts
+JavaScript函数的执行时机
 </title>
 
     
 
 
   
-  <meta name="author" content="" />
-  <meta name="description" content="" />
+  <meta name="author" content="EatFog" />
+  <meta name="description" content="本次我们对JS 函数的执行时机的学习，从一段代码开始
+" />
 
 
 
 <meta name="generator" content="Hugo 0.57.2" />
 
-<link rel="canonical" href="https://eatfog.net/posts/" />
+<link rel="canonical" href="https://eatfog.net/posts/10page/" />
 
 
-<meta property="og:title" content="Posts" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://eatfog.net/posts/" />
-
-<meta property="og:updated_time" content="2020-07-05T23:25:31+08:00" />
+<meta property="og:title" content="JavaScript函数的执行时机" />
+<meta property="og:description" content="本次我们对JS 函数的执行时机的学习，从一段代码开始" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://eatfog.net/posts/10page/" />
+<meta property="article:published_time" content="2020-07-05T23:25:31+08:00" />
+<meta property="article:modified_time" content="2020-07-05T23:25:31+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="JavaScript函数的执行时机"/>
+<meta name="twitter:description" content="本次我们对JS 函数的执行时机的学习，从一段代码开始"/>
 
 
 <link rel="stylesheet" href="/css/github-markdown.css" />
@@ -68,6 +69,67 @@ Posts
 
           
 <div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h2 class="ui header">
+          JavaScript函数的执行时机
+          <div class="sub header">@ EatFog · Sunday, Jul 5, 2020 · 1 分钟阅读 · 更新于 Jul 5, 2020</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><p>本次我们对JS 函数的执行时机的学习，从一段代码开始</p>
+
+<pre><code>let i = 0
+for(i = 0; i&lt;6; i++){
+  setTimeout(()=&gt;{
+    console.log(i)
+  },0)
+}
+</code></pre>
+
+<p>在这段代码中，循环体有一个setTimeout的延时，它会让console.log延时执行。当循环结束，i=6的时候，六个console.log才会执行，所以就会产生6个6。<br />
+那么如何在有延时的情况下 ，让for循环和没有延时一样呢？接下来就是无敌的let入场了！</p>
+
+<pre><code>for(let i = 0; i&lt;6; i++){
+  setTimeout(()=&gt;{
+    console.log(i)
+  },0)
+}
+</code></pre>
+
+<p>let在for循环中，每次循环在执行时会保存一个i在循环体中，这样就避免了因为setTimeout而导致的问题。<br />
+那么在没有let的情况下，能否解决这个问题呢？答案是可以的，我们可以利用setTimeout的第三个参数来解决</p>
+
+<pre><code>for (var i=0; i&lt;6; ++i) {
+	setTimeout(function(a){
+		console.log(a)
+	}, 0, i)
+}
+</code></pre></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+        
+          <a class="ui label" href="/tags/tag1" title="tag1">tag1</a>
+        
+          <a class="ui label" href="/tags/tag2" title="tag2">tag2</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; background: #1b1c1d !important; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i> Save as image
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
   <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
     <article class="dream-header">
   <section class="ui top attached center aligned segment">
@@ -212,62 +274,6 @@ Posts
 </article>
 
   </div>
-  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column">
-    <div class="ui segment dream-posts-section">
-      <h2 class="ui header">
-        Posts
-        <div class="ui grey sub header"></div>
-      </h2>
-
-      
-        <h3 class="ui header">2020</h3>
-        <ul>
-          
-            <li>
-              <a href="https://eatfog.net/posts/10page/">JavaScript函数的执行时机</a>
-            </li>
-          
-            <li>
-              <a href="https://eatfog.net/posts/9page/">JavaScript对象</a>
-            </li>
-          
-            <li>
-              <a href="https://eatfog.net/posts/8page/">JavaScript语法</a>
-            </li>
-          
-            <li>
-              <a href="https://eatfog.net/posts/7page/">JavaScript简介</a>
-            </li>
-          
-            <li>
-              <a href="https://eatfog.net/posts/6page/">浅析 URL</a>
-            </li>
-          
-            <li>
-              <a href="https://eatfog.net/posts/5page/">CSS布局</a>
-            </li>
-          
-            <li>
-              <a href="https://eatfog.net/posts/4page/">CSS动画</a>
-            </li>
-          
-            <li>
-              <a href="https://eatfog.net/posts/3page/">HTML常用标签</a>
-            </li>
-          
-            <li>
-              <a href="https://eatfog.net/posts/2page/">HTML入门笔记1</a>
-            </li>
-          
-            <li>
-              <a href="https://eatfog.net/posts/firstpage/">搭建个人博客方法</a>
-            </li>
-          
-        </ul>
-      
-
-    </div>
-  </div>
 </div>
 
         </section>
@@ -339,7 +345,6 @@ Posts
 
   
   
-
 </div>
 
         </section>
