@@ -84,21 +84,49 @@ jQuery的功能
 
 <p>jQuery就是通过<code>selectorOrArray</code>这个参数来获取元素，如果<code>selectorOrArray</code>是一个字符串，那么就会通过这个字符串进行<code>querySelectorAll(selectorOrArray)</code>操作来获取元素作为<code>elements</code>操作，如果<code>selectorOrArray</code>是元素的数组，那么就会直接把这个数组作为<code>elements</code>操作</p>
 
+<pre><code>  $('.test')//获取class含test的元素
+  $('.test').find('.kid')//获取class含test的元素的children中,class含有kid的元素
+</code></pre>
+
 <h1 id="jquery-的链式操作是怎样的">jQuery 的链式操作是怎样的</h1>
 
 <p>jQuery的链式操作是因为每次进行运行以此jQuery的函数时候，就会return一个或者多个api对象，即函数获取到的对象或者原对象</p>
 
+<pre><code>  $('.test')//获取class含test的元素
+    .addClass('red')//给选中的元素加上red类
+    .addClass('pig')//给选中的元素加上pig类
+</code></pre>
+
 <h1 id="jquery-如何创建元素">jQuery 如何创建元素</h1>
 
-<p>.jQuery 创建元素通过<code>.append()</code>函数实现，<code>.append()</code>函数中的参数是DOM 元素，DOM元素数组，HTML字符串，或者jQuery对象，或者返回值是上面类型的函数，用来插在每个匹配元素里面的末尾。在<code>.append()</code>函数的参数中加入html元素，就可以批量创建元素</p>
+<p>jQuery创建新元素的方法很简单，只需要把新元素传入jQuery的构造函数就行了</p>
+
+<pre><code>  $('&lt;div&gt;Hello&lt;/div&gt;')
+</code></pre>
 
 <h1 id="jquery-如何移动元素">jQuery 如何移动元素</h1>
 
-<p>jQuery移动元素的方式就是，在append()函数的参数选择被移动的元素</p>
+<p>移动元素的方法有两种。
+假设我们选定了一个div元素，需要把它移动到p元素的后面。
+* 第一种方法是使用insertAfter()，把div元素移动到p元素后面：</p>
+
+<pre><code>  $('div').insertAfter($('p'))
+</code></pre>
+
+<ul>
+<li><p>第二种方法是使用after()，把p元素加到div元素前面</p>
+
+<pre><code>$('p').after($('div'))
+</code></pre>
 
 <h1 id="jquery-如何修改元素的属性">jQuery 如何修改元素的属性</h1>
 
-<p>.jQuery对元素的属性   的修改是通过重载实现的，比如<code>.width()</code>函数，如果括号内有参数，就会执行把参数设置为width的函数，如果没有参数，就会执行返回width的操作</p></article>
+<p>jQuery对元素的属性的修改是通过重载实现的，比如<code>.width()</code>函数，如果括号内有参数，就会执行把参数设置为width的函数，如果没有参数，就会执行返回width的操作</p>
+
+<pre><code>$('div').width()//获取div的width
+$('div').width('100px')/设置div的width
+</code></pre></li>
+</ul></article>
     </section>
 
     <footer class="ui attached segment dream-tags">
