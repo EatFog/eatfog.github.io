@@ -5,41 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-
-
-  tag | tag1
-
-
-
-
+浅析 MVC
 </title>
 
     
 
 
   
-  <meta name="author" content="" />
-  <meta name="description" content="" />
+  <meta name="author" content="EatFog" />
+  <meta name="description" content="MVC是一种设计模式，我们可以通过MVC来优化代码结构，使得我们整个程序更加简洁
+" />
 
 
 
 <meta name="generator" content="Hugo 0.57.2" />
 
-<link rel="canonical" href="https://eatfog.net/tags/tag1/" />
+<link rel="canonical" href="https://eatfog.net/posts/12page/" />
 
 
-<meta property="og:title" content="tag1" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://eatfog.net/tags/tag1/" />
-
-<meta property="og:updated_time" content="2020-09-13T14:16:06+08:00" />
+<meta property="og:title" content="浅析 MVC" />
+<meta property="og:description" content="MVC是一种设计模式，我们可以通过MVC来优化代码结构，使得我们整个程序更加简洁" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://eatfog.net/posts/12page/" />
+<meta property="article:published_time" content="2020-09-13T14:16:06+08:00" />
+<meta property="article:modified_time" content="2020-09-13T14:16:06+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="tag1"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="浅析 MVC"/>
+<meta name="twitter:description" content="MVC是一种设计模式，我们可以通过MVC来优化代码结构，使得我们整个程序更加简洁"/>
 
 
 <link rel="stylesheet" href="/css/github-markdown.css" />
@@ -74,7 +69,105 @@
 
           
 <div class="ui centered relaxed grid dream-grid">
-  <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h2 class="ui header">
+          浅析 MVC
+          <div class="sub header">@ EatFog · Sunday, Sep 13, 2020 · 1 分钟阅读 · 更新于 Sep 13, 2020</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><p>MVC是一种设计模式，我们可以通过MVC来优化代码结构，使得我们整个程序更加简洁</p>
+
+<h1 id="mvc-三个对象分别做什么">MVC 三个对象分别做什么</h1>
+
+<p>MVC是由model，view，container三个元素组成。</p>
+
+<ol>
+<li><p>model负责数据相关操作</p>
+
+<pre><code>const m ={
+data：{各类数据}，
+create:(){增加数据操作}，
+delete:(){删除数据操作},
+update:(){更新数据操作},
+search:(){查询数据操作}
+}
+</code></pre></li>
+
+<li><p>view负责视图相关操作</p>
+
+<pre><code>const v = {
+el: null,
+html: html代码,
+init(container) {
+    获取mvc要操作的dom元素为el
+},
+render(n) {重新渲染视图}
+}
+</code></pre></li>
+
+<li><p>container负责其他的函数操作，例如事件监听</p>
+
+<pre><code>const c = {
+init(container) {
+    进行初始化
+},
+events: {
+    事件表
+},
+add() {
+    对应函数
+},
+autoBindEvents() {
+    表驱动事件监听
+    }
+}
+}
+</code></pre></li>
+</ol>
+
+<h1 id="eventbus-有哪些-api-作用是什么">EventBus 有哪些 API，作用是什么</h1>
+
+<p>EventBus是是个空对象，其主要作用是利用其自带的on()方法和trigger()方法来进行对象之间通信</p>
+
+<pre><code>const eventBus = $({})
+eventBus.trigger('xxx')//发送
+eventBus.on('xxx',()=&gt;{对应函数})//响应
+</code></pre>
+
+<h1 id="表驱动编程是做什么的">表驱动编程是做什么的</h1>
+
+<p>表驱动编程就是声明一个哈希表，键名是事件类型+对象名，键值是监听函数名字，通过遍历这个哈希表来进行批量的函数监听</p>
+
+<h1 id="个人对模块化的理解">个人对模块化的理解</h1>
+
+<p>模块化可以让整段代码更加结构化，把整个应用分成多个功能组件，更换阅读理解和管理。而且因为有些模块可以在别的地方使用，所以提高了复用性。</p></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+        
+          <a class="ui label" href="/tags/tag1" title="tag1">tag1</a>
+        
+          <a class="ui label" href="/tags/tag2" title="tag2">tag2</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; background: #1b1c1d !important; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i> Save as image
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
     <article class="dream-header">
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
@@ -230,93 +323,7 @@
 </article>
 
   </div>
-
-  
-  
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-      
-<article class="ui raised card dream-card">
-
-  <div class="image">
-    
-      <img src="/img/default3.jpg" alt="HTML入门笔记1" />
-    
-  </div>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="https://eatfog.net/posts/2page/">HTML入门笔记1</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Thursday, Apr 23, 2020</p>
-      <p class="author">@ EatFog</p>
-    </div>
-    <div class="description">
-      上周刚刚搞定HTML的入门部分，今天补一下笔记
-
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      1 分钟阅读
-    </a>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-      
-<article class="ui raised card dream-card">
-
-  <div class="image">
-    
-      <img src="/img/default2.jpg" alt="搭建个人博客方法" />
-    
-  </div>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="https://eatfog.net/posts/firstpage/">搭建个人博客方法</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Thursday, Apr 23, 2020</p>
-      <p class="author">@ EatFog</p>
-    </div>
-    <div class="description">
-      之前学习了使用hugo搭建个人博客，现在做一个简单的总结
-
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      1 分钟阅读
-    </a>
-  </div>
-</article>
-
-    </div>
-  
 </div>
-
-<div class="ui secondary menu dream-menu dream-paginator">
-  
-  <div class="item">
-    <a href="/tags/tag1/">
-    
-      <i class="large arrow alternate circle outline link left icon" title="上一页"></i>
-    
-    </a>
-  </div>
-  
-
-  
-</div>
-
 
         </section>
         <section class="back">
@@ -387,7 +394,6 @@
 
   
   
-
 </div>
 
         </section>
