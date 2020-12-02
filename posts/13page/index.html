@@ -5,35 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-所有分类
+虚拟DOM与DOM diff
 </title>
 
     
 
 
   
-  <meta name="author" content="" />
-  <meta name="description" content="" />
+  <meta name="author" content="EatFog" />
+  <meta name="description" content="今天我们来学习虚拟DOM与DOM diff的知识
+" />
 
 
 
 <meta name="generator" content="Hugo 0.57.2" />
 
-<link rel="canonical" href="https://eatfog.net/categories/" />
+<link rel="canonical" href="https://eatfog.net/posts/13page/" />
 
 
-<meta property="og:title" content="Categories" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://eatfog.net/categories/" />
-
-<meta property="og:updated_time" content="2020-12-02T19:02:55+08:00" />
+<meta property="og:title" content="虚拟DOM与DOM diff" />
+<meta property="og:description" content="今天我们来学习虚拟DOM与DOM diff的知识" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://eatfog.net/posts/13page/" />
+<meta property="article:published_time" content="2020-12-02T19:02:55+08:00" />
+<meta property="article:modified_time" content="2020-12-02T19:02:55+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Categories"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="虚拟DOM与DOM diff"/>
+<meta name="twitter:description" content="今天我们来学习虚拟DOM与DOM diff的知识"/>
 
 
 <link rel="stylesheet" href="/css/github-markdown.css" />
@@ -68,6 +69,68 @@
 
           
 <div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h2 class="ui header">
+          虚拟DOM与DOM diff
+          <div class="sub header">@ EatFog · Wednesday, Dec 2, 2020 · 1 分钟阅读 · 更新于 Dec 2, 2020</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><p>今天我们来学习虚拟DOM与DOM diff的知识</p>
+
+<h1 id="虚拟-dom-是什么">虚拟 DOM 是什么？</h1>
+
+<p>虚拟 DOM是一个可以代表DOM树的对象，其通常有标签名，标签属性，事件监听和子元素。</p>
+
+<h1 id="虚拟-dom-的优点">虚拟 DOM 的优点</h1>
+
+<p>虚拟DOM可以减少DOM的操作，把多次操作合并成一次操作,或者把多于重复的操作省掉。<br />
+虚拟DOM的本质是JS对象，因此可以把虚拟DOM的元素转化成小程序，iOS应用，安卓应用的元素，有跨平台的功能。</p>
+
+<h1 id="虚拟-dom-的缺点">虚拟 DOM 的缺点</h1>
+
+<p>需要额外的创建函数或者用JSX或者Vue-Loader转译，而且严重依赖打包工具</p>
+
+<h1 id="dom-diff-是什么">DOM diff 是什么</h1>
+
+<p>DOM diff是一个函数，输入一个和旧节点一个新节点，就会返回一个DOM操作的对象。<br />
+DOM diff会对新旧两个DOM树的root节点使用Tree diff来进行逐层对比，Tree diff会选择地对子节点使用Component diff或者Element diff，来寻找哪个节点要更新。<br />
+如果子节点是是组件（可能是Vue特有的？）则使用Component diff，如果组件的类型不同就直接替换，相同则指更改属性。<br />
+如果子节点是原生标签则使用element diff，标签名不同就替换，相同就更新属性。<br />
+对子节点使用完Element diff和Component diff以后，就对该节点继续进行Tree diff</p>
+
+<h1 id="dom-diff-的优点">DOM diff 的优点</h1>
+
+<p>通过DOM diff的算法可以有效的减少DOM的操作，当然，如果是超大批量的节点变更（几十万），可以使用原生DOM。</p>
+
+<h1 id="dom-diff-的问题-key">DOM diff 的问题（key）</h1>
+
+<p>同级节点的对比存在BUG，比如[1,2,3]这些节点，去除2以后成为[1,3]，DOM diff会认为是把2改成3，再去掉3而不是直接去掉2</p></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+        
+          <a class="ui label" href="/tags/tag1" title="tag1">tag1</a>
+        
+          <a class="ui label" href="/tags/tag2" title="tag2">tag2</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; background: #1b1c1d !important; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i> Save as image
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
   <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
     <article class="dream-header">
   <section class="ui top attached center aligned segment">
@@ -230,83 +293,6 @@
 </article>
 
   </div>
-  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column">
-    <div class="ui segment dream-categories-section">
-      <h2 class="ui header">
-        所有分类
-        <div class="ui grey sub header">
-          
-            1 category
-          
-        </div>
-      </h2>
-
-      
-      
-        
-        <h3 class="ui header">
-          <a href="/categories/category1/">category1</a>
-          13篇文章
-        </h3>
-        <ul>
-          
-            <li>
-              <a href="https://eatfog.net/posts/13page/">虚拟DOM与DOM diff</a>
-            </li>
-          
-            <li>
-              <a href="https://eatfog.net/posts/12page/">浅析 MVC</a>
-            </li>
-          
-            <li>
-              <a href="https://eatfog.net/posts/11page/">jQuery的功能</a>
-            </li>
-          
-            <li>
-              <a href="https://eatfog.net/posts/10page/">JavaScript函数的执行时机</a>
-            </li>
-          
-            <li>
-              <a href="https://eatfog.net/posts/9page/">JavaScript对象</a>
-            </li>
-          
-            <li>
-              <a href="https://eatfog.net/posts/8page/">JavaScript语法</a>
-            </li>
-          
-            <li>
-              <a href="https://eatfog.net/posts/7page/">JavaScript简介</a>
-            </li>
-          
-            <li>
-              <a href="https://eatfog.net/posts/6page/">浅析 URL</a>
-            </li>
-          
-            <li>
-              <a href="https://eatfog.net/posts/5page/">CSS布局</a>
-            </li>
-          
-            <li>
-              <a href="https://eatfog.net/posts/4page/">CSS动画</a>
-            </li>
-          
-            <li>
-              <a href="https://eatfog.net/posts/3page/">HTML常用标签</a>
-            </li>
-          
-            <li>
-              <a href="https://eatfog.net/posts/2page/">HTML入门笔记1</a>
-            </li>
-          
-            <li>
-              <a href="https://eatfog.net/posts/firstpage/">搭建个人博客方法</a>
-            </li>
-          
-        </ul>
-      
-
-    </div>
-  </div>
 </div>
 
         </section>
@@ -378,7 +364,6 @@
 
   
   
-
 </div>
 
         </section>
