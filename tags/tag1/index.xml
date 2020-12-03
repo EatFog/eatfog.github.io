@@ -6,10 +6,19 @@
     <description>Recent content in tag1 on EatFog的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Wed, 02 Dec 2020 19:02:55 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 03 Dec 2020 22:56:31 +0800</lastBuildDate>
     
 	<atom:link href="https://eatfog.net/tags/tag1/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vue两个版本的区别</title>
+      <link>https://eatfog.net/posts/14page/</link>
+      <pubDate>Thu, 03 Dec 2020 22:56:31 +0800</pubDate>
+      
+      <guid>https://eatfog.net/posts/14page/</guid>
+      <description>&lt;p&gt;vue.js存在着完整版与非完整版,他们两个版本有着不同的功能&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>虚拟DOM与DOM diff</title>
